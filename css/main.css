@@ -1373,6 +1373,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-button {
+  background: rgba(255,255,255,0.7);
   margin-top: 40px;
 }
 .posts-collapse {
@@ -1898,7 +1899,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #cf6ae7;
+  background: #6121c2;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2558,7 +2559,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 .header-inner {
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   border-radius: initial;
   box-shadow: initial;
   overflow: hidden;
@@ -2593,7 +2594,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 .content-wrap {
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   border-radius: initial;
   box-shadow: initial;
   box-sizing: border-box;
@@ -2618,7 +2619,7 @@ ul.breadcrumb li+li:last-child {
   }
 }
 .sidebar {
-  background: #f5f7f9;
+  background: rgba(255,255,255,0.7);
   box-shadow: none;
   float: left;
   margin-left: -100%;
@@ -2821,7 +2822,7 @@ ul.breadcrumb li+li:last-child {
   color: #222;
 }
 .sidebar-inner {
-  background: #fff;
+  background: rgba(255,255,255,0.7);
   border-radius: initial;
   box-shadow: initial;
   box-sizing: border-box;
