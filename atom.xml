@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-04T09:58:42.434Z</updated>
+  <updated>2019-08-04T10:23:33.535Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2019/08/04/%E5%8D%9A%E5%AE%A2%E2%88%9A/"/>
     <id>http://yoursite.com/2019/08/04/博客√/</id>
     <published>2019-08-04T09:55:54.000Z</published>
-    <updated>2019-08-04T09:58:42.434Z</updated>
+    <updated>2019-08-04T10:23:33.535Z</updated>
     
-    <content type="html"><![CDATA[<p><font size="2" color="blue"><center>用了两天时间，终于把博客给搭建好了，累并快乐着</center></font></p>]]></content>
+    <content type="html"><![CDATA[<!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --><blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote><p><font size="2" color="blue"><center>用了两天时间，终于把博客给搭建好了，累并快乐着</center></font></p>]]></content>
     
     <summary type="html">
     
-      用了两天时间，终于把博客给搭建好了，累并快乐着
+      优秀的人，不是不合群，而是他们合群的人里面没有你用了两天时间，终于把博客给搭建好了，累并快乐着
     
     </summary>
     
