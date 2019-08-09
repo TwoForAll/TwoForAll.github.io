@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ssillycat.com/"/>
-  <updated>2019-08-09T16:04:13.822Z</updated>
+  <updated>2019-08-04T10:23:33.535Z</updated>
   <id>http://ssillycat.com/</id>
   
   <author>
@@ -15,38 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://ssillycat.com/2019/08/10/JDBC%E8%87%AA%E5%86%99%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
-    <id>http://ssillycat.com/2019/08/10/JDBC自写工具类踩坑记/</id>
-    <published>2019-08-09T16:04:13.751Z</published>
-    <updated>2019-08-09T16:04:13.822Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="JDBC自写工具类踩坑记"><a href="#JDBC自写工具类踩坑记" class="headerlink" title="JDBC自写工具类踩坑记"></a>JDBC自写工具类踩坑记</h2><p>1.首先，工具类源码如下：</p><pre><code>package com.ssillycat.utils;import java.io.FileInputStream;import java.io.IOException;import java.sql.*;import java.util.Properties;public class jdbc_utils {    /*静态变量，包括注册驱动需要传的参数，连接对象需要传的url，user，password，    这些参数都存在properties中*/    private static String url;    private static String user;    private static String password;    private static String driver;    //静态代码块，对静态变量进行赋值    static {        try {            //读取properties中的内容            Properties pro = new Properties();            String path  = jdbc_utils.class.getClassLoader().getResource(&quot;jdbc.properties&quot;).getPath();            pro.load(new FileInputStream(path));            //获取数据，赋值            url = pro.getProperty(&quot;url&quot;);            user = pro.getProperty(&quot;user&quot;);            password = pro.getProperty(&quot;password&quot;);            driver = pro.getProperty(&quot;driver&quot;);            //注册驱动            Class.forName(driver);        } catch (IOException e) {            e.printStackTrace();        } catch (ClassNotFoundException e) {            e.printStackTrace();        }catch (NullPointerException e) {            e.printStackTrace();        }    }    /**     * 获取资源     * @return     * @throws SQLException     */    public static Connection conn() throws SQLException {        return DriverManager.getConnection(url, user, password);    }    /**     * 释放资源     * @param stmt     * @param conn     */    public static void close(Statement stmt,Connection conn){        if( stmt != null){            try {                stmt.close();            } catch (SQLException e) {                e.printStackTrace();            }        }        if( conn != null){            try {                conn.close();            } catch (SQLException e) {                e.printStackTrace();            }        }    }    /**     * 释放资源[重载]     * @param stmt     * @param conn     */    public static void close(ResultSet rs,Statement stmt, Connection conn){        if( rs != null){            try {                rs.close();            } catch (SQLException e) {                e.printStackTrace();            }        }        if( stmt != null){            try {                stmt.close();            } catch (SQLException e) {                e.printStackTrace();            }        }        if( conn != null){            try {                conn.close();            } catch (SQLException e) {                e.printStackTrace();            }        }    }}</code></pre><p>2.properties储存内容</p><pre><code>url=jdbc:mysql://localhost:3306/db2user=rootpassword=rootdriver=com.mysql.jdbc.Driver</code></pre><p>3.踩坑记</p><pre><code>1.properties中的储存的值不应带有双引号：    url=&quot;jdbc:mysql://localhost:3306/db2&quot;    user=&quot;root&quot;    password=&quot;root&quot;    driver=&quot;com.mysql.jdbc.Driver&quot;    带有双引号properties返回的字符串也是会带有双引号，储存在静态变量中作为参数在.conn()方法中调用会抛出连接异常：    java.sql.SQLException: No suitable driver found for &quot;jdbc:mysql://localhost:3306/db2&quot;2.properties的getProperty()方法中的参数传的是字符串，错误如下：    url = pro.getProperty(url);    user = pro.getProperty(user);    password = pro.getProperty(password);    driver = pro.getProperty(driver);    因为第一点导致的第二点的错误，敲代码敲糊涂了。3.driver=&quot;com.mysql.jdbc.Driver&quot;中的Driver手写字母为大写</code></pre><p>4.原因：</p><pre><code>过于依赖IDEA，为了追求代码速度忽略了许多东西。阿西吧！</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      JDBC自写工具类踩坑记
-1.首先，工具类源码如下：
-
-package com.ssillycat.utils;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.sql.*;
-import java.util.Properties;
-
-public class jdbc_utils {
-    /*静态变量，包括注册驱动需要传的参数，连接对象需要传的url，user，password，
-    这些参数都存在properties中*/
-    private static String url;
-
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>终于把博客弄好了</title>
