@@ -48,9 +48,9 @@ public class jdbc_utils {
       <category term="JAVA" scheme="http://ssillycat.com/categories/JAVA/"/>
     
     
-      <category term="蓝瘦" scheme="http://ssillycat.com/tags/%E8%93%9D%E7%98%A6/"/>
-    
       <category term="脱发" scheme="http://ssillycat.com/tags/%E8%84%B1%E5%8F%91/"/>
+    
+      <category term="蓝瘦" scheme="http://ssillycat.com/tags/%E8%93%9D%E7%98%A6/"/>
     
       <category term="JAVA" scheme="http://ssillycat.com/tags/JAVA/"/>
     
@@ -74,9 +74,9 @@ public class jdbc_utils {
       <category term="多动症" scheme="http://ssillycat.com/categories/%E5%A4%9A%E5%8A%A8%E7%97%87/"/>
     
     
-      <category term="脱发" scheme="http://ssillycat.com/tags/%E8%84%B1%E5%8F%91/"/>
-    
       <category term="开心" scheme="http://ssillycat.com/tags/%E5%BC%80%E5%BF%83/"/>
+    
+      <category term="脱发" scheme="http://ssillycat.com/tags/%E8%84%B1%E5%8F%91/"/>
     
   </entry>
   
