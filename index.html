@@ -255,6 +255,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ssillycat.com/2019/08/10/防止SQL注入/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Night Owl">
+      <meta itemprop="description" content="Keep Doing">
+      <meta itemprop="image" content="/images/db1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SsillyCat">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/10/防止SQL注入/" class="post-title-link" itemprop="url">防止sql注入</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-10 10:14:08 / 修改时间：11:32:40" itemprop="dateCreated datePublished" datetime="2019-08-10T10:14:08+08:00">2019-08-10</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          <br>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">4k</span>
+            </span>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">4 分钟</span>
+            </span>
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          防止SQL注入
+SQL注入原理：
+在拼接sql时，有一些sql的特殊关键字参与字符串的拼接
+这种情况会导致安全性问题
+
+select * from info where name = 'alkfldaf' and password = 'a' or 'a' = 'a'
+
+上面的sql语句解析为两部分：
+
+1. select * from info where name = 'alkfldaf' and password = 'a'
+2. 'a' = 'a'
+
+两者通过or分割，or判断有真则真，故会查询成功
+
+解决方案
+1. prepareStatement:
+package com.ssil
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/10/防止SQL注入/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+<div>
+  
+</div>
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ssillycat.com/2019/08/10/JDBC自写工具类踩坑记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -291,7 +437,7 @@
                 
               
 
-              <time title="创建时间：2019-08-10 00:00:08 / 修改时间：07:17:15" itemprop="dateCreated datePublished" datetime="2019-08-10T00:00:08+08:00">2019-08-10</time>
+              <time title="创建时间：2019-08-10 00:00:08 / 修改时间：11:33:30" itemprop="dateCreated datePublished" datetime="2019-08-10T00:00:08+08:00">2019-08-10</time>
             </span>
           
             
@@ -558,7 +704,7 @@ public class jdbc_utils {
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -671,12 +817,12 @@ public class jdbc_utils {
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">4k</span>
+    <span title="站点总字数">8k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3 分钟</span>
+    <span title="站点阅读时长">7 分钟</span>
 </div>
 
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
