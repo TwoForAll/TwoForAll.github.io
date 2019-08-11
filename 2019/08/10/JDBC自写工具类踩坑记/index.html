@@ -60,14 +60,14 @@
 </script>
 
   <meta name="description" content="JDBC自写工具类踩坑记 首先，工具类源码如下： package com.ssillycat.utils;  import java.io.FileInputStream; import java.io.IOException; import java.sql.*; import java.util.Properties;  public class jdbc_utils {     /*静态变量">
-<meta name="keywords" content="蓝瘦,脱发,JDBC">
+<meta name="keywords" content="JDBC,脱发,蓝瘦">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JDBC自写工具类踩坑记">
 <meta property="og:url" content="http://ssillycat.com/2019/08/10/JDBC自写工具类踩坑记/index.html">
 <meta property="og:site_name" content="SsillyCat">
 <meta property="og:description" content="JDBC自写工具类踩坑记 首先，工具类源码如下： package com.ssillycat.utils;  import java.io.FileInputStream; import java.io.IOException; import java.sql.*; import java.util.Properties;  public class jdbc_utils {     /*静态变量">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-10T03:33:30.731Z">
+<meta property="og:updated_time" content="2019-08-10T13:13:12.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDBC自写工具类踩坑记">
 <meta name="twitter:description" content="JDBC自写工具类踩坑记 首先，工具类源码如下： package com.ssillycat.utils;  import java.io.FileInputStream; import java.io.IOException; import java.sql.*; import java.util.Properties;  public class jdbc_utils {     /*静态变量">
@@ -292,7 +292,7 @@
                 
               
 
-              <time title="创建时间：2019-08-10 00:00:08 / 修改时间：11:33:30" itemprop="dateCreated datePublished" datetime="2019-08-10T00:00:08+08:00">2019-08-10</time>
+              <time title="创建时间：2019-08-10 00:00:08 / 修改时间：21:13:12" itemprop="dateCreated datePublished" datetime="2019-08-10T00:00:08+08:00">2019-08-10</time>
             </span>
           
             
@@ -367,7 +367,7 @@ public class jdbc_utils {
             //读取properties中的内容
             Properties pro = new Properties();
             String path  = jdbc_utils.class.getClassLoader().getResource(&quot;jdbc.properties&quot;).getPath();
-            pro.load(new FileInputStream(path));
+            pro.load(new FileReader(path));
             //获取数据，赋值
             url = pro.getProperty(&quot;url&quot;);
             user = pro.getProperty(&quot;user&quot;);
@@ -519,11 +519,11 @@ driver=com.mysql.jdbc.Driver</code></pre><h3 id="踩坑记"><a href="#踩坑记"
           
         
         <div class="post-tags">
-            <a href="/tags/蓝瘦/" rel="tag"><i class="fa fa-tag"></i> 蓝瘦</i></a>
+            <a href="/tags/JDBC/" rel="tag"><i class="fa fa-tag"></i> JDBC</i></a>
           
             <a href="/tags/脱发/" rel="tag"><i class="fa fa-tag"></i> 脱发</i></a>
           
-            <a href="/tags/JDBC/" rel="tag"><i class="fa fa-tag"></i> JDBC</i></a>
+            <a href="/tags/蓝瘦/" rel="tag"><i class="fa fa-tag"></i> 蓝瘦</i></a>
           
         </div>
         <div class="post-nav">
@@ -602,7 +602,7 @@ driver=com.mysql.jdbc.Driver</code></pre><h3 id="踩坑记"><a href="#踩坑记"
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -644,7 +644,9 @@ driver=com.mysql.jdbc.Driver</code></pre><h3 id="踩坑记"><a href="#踩坑记"
         
           
         
-        <span class="site-state-item-count">4</span>
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -732,12 +734,12 @@ driver=com.mysql.jdbc.Driver</code></pre><h3 id="踩坑记"><a href="#踩坑记"
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">9k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7 分钟</span>
+    <span title="站点阅读时长">8 分钟</span>
 </div>
 
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
